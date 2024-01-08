@@ -43,10 +43,8 @@ class VictimComputer():
             ciphertext, OAEP(MGF1(SHA256()), SHA256(), None))
 
         d = self.__private_key.private_numbers().d
-
         power_trace: list[float] = [random.uniform(0, 1)
                                     for _ in range(random.randint(6, 20))]
-
         for bit in bin(d)[3:]:
             bit = int(bit)
             # The single bit power trace

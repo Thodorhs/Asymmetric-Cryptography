@@ -15,7 +15,7 @@ def create_signature(message, public_key):
 
 def main():
     parser = argparse.ArgumentParser(description='Digital Signature')
-    parser.add_argument('-m', '--message', help='Message file', required=True)
+    parser.add_argument('-m', '--message', help='Message', required=True)
     args = parser.parse_args()
     
     message = bytes.fromhex(args.message)
